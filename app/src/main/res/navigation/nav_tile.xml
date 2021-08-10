@@ -1,0 +1,21 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tile_nav"
+    app:startDestination="@id/tileSortingFragment">
+
+    <fragment
+        android:id="@+id/tileSortingFragment"
+        android:name="com.oit.soucs.TileSortingFragment"
+        android:label="TileSortingFragment"
+        tools:layout="@layout/fragment_tile_sorting">
+        <action
+            android:id="@+id/action_tileSortingFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.oit.soucs.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+</navigation>

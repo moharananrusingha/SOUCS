@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oit.soucs.views.MaskedCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@color/white"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardPreventCornerOverlap="false"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Tile.Card">
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:focusable="true">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/tile_item_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/tilesImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/tile_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Item name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:includeFontPadding="false"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toEndOf="@id/tile_item_image"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tile_item_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Rs 250, KOT: KOT2 "
+                android:textSize="12sp"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="@id/tile_item_name"
+                app:layout_constraintTop_toBottomOf="@id/tile_item_name"/>
+
+            <ImageView
+                android:id="@+id/tile_item_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/ic_sort_drag_drop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.oit.soucs.views.MaskedCardView>
+</layout>

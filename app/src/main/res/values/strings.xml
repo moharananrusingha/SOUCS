@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Clusive</string>
+    <string name="play_inclusion_tiles">Play Inclusion Tiles</string>
+    <string name="welcome">Welcome!</string>
+    <string name="welcome_msg">We\'re so glad you\'re here! The following game will be a nice warmup to get you started. </string>
+    <string name="welcome_header">Someone Challenged You!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="show_result">Show Result</string>
+</resources>
