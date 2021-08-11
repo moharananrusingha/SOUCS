@@ -5,13 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.oit.soucs.adapters.TilesAdapter
 import com.oit.soucs.data.Tile
-import com.oit.soucs.data.TileRepository
 import com.oit.soucs.databinding.FragmentTileSortingBinding
 import com.oit.soucs.util.RecyclerViewDragDetector
 import com.oit.soucs.viewmodels.TileListViewModel
@@ -52,9 +51,11 @@ class TileSortingFragment : Fragment() {
                 adapter.submitList(it)
             }
         }
+        binding.btnShowResult.setOnClickListener {
+            val grade = (0..4).random()
+            val action = TileSortingFragmentDirections.actionTileSortingFragmentToResultFragment(grade)
+            it.findNavController().navigate(action)
+        }
         return binding.root
-    }
-    fun onClickShowResult(v: View){
-
     }
 }

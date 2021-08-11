@@ -38,10 +38,11 @@ abstract class AppDatabase: RoomDatabase() {
 
                             //pre-populate data
                             val tileList: MutableList<Tile> by lazy {
-                                mutableListOf(Tile("1",1,null,"First","Lorem Ipsum Description"),Tile("2",2,null,"Second","Lorem Ipsum Description"),
-                                    Tile("3",3,null,"Third","Lorem Ipsum Description"),Tile("4",4,null,"Fourth","Lorem Ipsum Description"),
-                                    Tile("5",5,null,"Fifth","Lorem Ipsum Description"),Tile("6",6,null,"Six","Lorem Ipsum Description"),Tile("7",7,null,"Seventh","Lorem Ipsum Description"),
-                                    Tile("8",8,null,"Eight","Lorem Ipsum Description"),Tile("9",9,null,"Nine","Lorem Ipsum Description"),Tile("10",10,null,"Ten","Lorem Ipsum Description")
+                                mutableListOf(Tile("1",1,null,"Acceptance","Lorem Ipsum Description"),Tile("2",2,null,"Exclusion","Lorem Ipsum Description"),
+                                    Tile("3",3,null,"Fear of Difference","Lorem Ipsum Description"),Tile("4",4,null,"Avoidance","Lorem Ipsum Description"),
+                                    Tile("5",5,null,"Lasting of Friendship","Lorem Ipsum Description"),Tile("6",6,null,"Situational Friendship","Lorem Ipsum Description"),
+                                    Tile("7",7,null,"Meaningful Inclusion","Lorem Ipsum Description"),
+                                    Tile("8",8,null,"Tolerance","Lorem Ipsum Description"),Tile("9",9,null,"Inclusion","Lorem Ipsum Description")
                                 )
                             }
                             CoroutineScope(Dispatchers.IO).launch {

@@ -11,11 +11,17 @@
         tools:layout="@layout/fragment_tile_sorting">
         <action
             android:id="@+id/action_tileSortingFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            app:destination="@id/resultFragment"
+            />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.oit.soucs.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="grade"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>
