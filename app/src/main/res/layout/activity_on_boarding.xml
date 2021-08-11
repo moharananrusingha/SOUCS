@@ -10,5 +10,5 @@
         android:id="@+id/main_onboarding_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.oit.soucs.MyOnBoardingFragment"/>
+        class="com.oit.soucs.MyOnBoardingFragment"/>
 </FrameLayout>

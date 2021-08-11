@@ -17,6 +17,7 @@ class WelcomeActivity : AppCompatActivity() {
                 startActivity(Intent(this@WelcomeActivity, OnBoardingActivity::class.java))
             }
         }*/
-        startActivity(Intent(this@WelcomeActivity, InclusionTilesActivity::class.java))
+        //startActivity(Intent(this@WelcomeActivity, InclusionTilesActivity::class.java))
+        startActivity(Intent(this@WelcomeActivity, OnBoardingActivity::class.java))
     }
 }

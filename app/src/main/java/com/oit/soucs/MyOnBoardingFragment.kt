@@ -35,8 +35,9 @@ class MyOnBoardingFragment: OnboardingSupportFragment() {
         return null
     }
 
-    override fun onCreateContentView(inflater: LayoutInflater?, container: ViewGroup?): View? {
+    override fun onCreateContentView(inflater: LayoutInflater?, container: ViewGroup?): View {
         return ImageView(context).apply {
+            //layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
             scaleType = ImageView.ScaleType.CENTER_INSIDE
             setImageResource(R.drawable.ic_launcher_background)
             setPadding(0, 32, 0, 32)

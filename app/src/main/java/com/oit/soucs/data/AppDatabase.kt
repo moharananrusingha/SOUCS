@@ -9,7 +9,6 @@ import com.oit.soucs.util.DATABASE_NAME
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.concurrent.Executors
 
 @Database(entities = [Tile::class], version = 1, exportSchema = false)
 abstract class AppDatabase: RoomDatabase() {
