@@ -32,11 +32,11 @@ class TileSortingFragment : Fragment() {
         binding = FragmentTileSortingBinding.inflate(inflater,container,false)
         ItemTouchHelper(object : RecyclerViewDragDetector() {
             override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
-                tileList[viewHolder.bindingAdapterPosition] = tileList[target.bindingAdapterPosition].also {
-                    tileList[target.bindingAdapterPosition] = tileList[viewHolder.bindingAdapterPosition] }
-                tileList[viewHolder.bindingAdapterPosition].sortId = tileList[target.bindingAdapterPosition].also {
-                    tileList[target.bindingAdapterPosition].sortId = tileList[viewHolder.bindingAdapterPosition].sortId }.sortId
-                adapter.notifyItemMoved(viewHolder.bindingAdapterPosition, target.bindingAdapterPosition)
+                tileList[viewHolder.adapterPosition] = tileList[target.adapterPosition].also {
+                    tileList[target.adapterPosition] = tileList[viewHolder.adapterPosition] }
+                tileList[viewHolder.adapterPosition].sortId = tileList[target.adapterPosition].also {
+                    tileList[target.adapterPosition].sortId = tileList[viewHolder.adapterPosition].sortId }.sortId
+                adapter.notifyItemMoved(viewHolder.adapterPosition, target.adapterPosition)
 
                 return true
             }
